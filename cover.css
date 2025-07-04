@@ -1,7 +1,6 @@
-/*
- * Globals
- */
-
+* {
+  font-family: Arial, sans-serif;
+}
 
 /* Custom default button */
 .btn-light,
@@ -11,33 +10,31 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-
 /*
  * Base structure
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
 .cover-container {
   max-width: 42em;
 }
 
-
 /*
  * Header
  */
 
 .nav-masthead .nav-link {
-  color: rgba(255, 255, 255, .5);
-  border-bottom: .25rem solid transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -47,4 +44,65 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 네비게이션 hover */
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, 0.55);
+  border-bottom: 0.25rem solid transparent;
+  transition: 0.15s;
+}
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* ─── 헤더 고정 ─── */
+.fixed-header {
+  position: fixed; /* 언제나 화면 상단에 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* 다른 요소 위에 렌더링 */
+  background: rgba(0, 0, 0, 0.8); /* 투명도 있는 어두운 배경 */
+  backdrop-filter: blur(4px); /* 유리 효과(선택)        */
+}
+/* 헤더 높이(약 4.5rem) 만큼 본문이 아래서 시작 */
+.cover-container {
+  padding-top: 4.5rem;
+}
+
+/* ───────── NEW : 섹션 전체화면 크기 ───────── */
+.page-section {
+  min-height: 100vh; /* 한 화면 꽉 채움   */
+  padding: 5rem 0; /* 위·아래 여백      */
+  display: flex; /* 중앙정렬을 위한 flex */
+  align-items: center; /* 수직 중앙          */
+}
+
+/* 모바일 */
+@media (max-width: 575.98px) {
+  .page-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+}
+
+/* ─── About 구역 리스트 ─── */
+.list-about {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin: 0;
+}
+.list-about li {
+  margin-bottom: 0.35rem;
+}
+.list-about li::marker {
+  color: #fff !important;
 }

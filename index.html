@@ -1,226 +1,184 @@
+<!-- ★ 변경·추가된 부분에만 주석 // NEW 표시 ★ -->
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="auto">
+<html lang="kr" class="h-100" data-bs-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Astro v5.9.2" />
-    <title>Cover Template · Bootstrap v5.3</title>
+    <title>이상정의 portfolio</title>
+
+    <!-- 부트스트랩 -->
     <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/cover/"
-    />
-    <script src="../portfolio/assets/js/color-modes.js"></script>
-    <link
-      href="../poryfolio/assets/dist/css/bootstrap.min.css"
+      href="../portfolio/assets/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#712cf9" />
+    <script src="../portfolio/assets/js/color-modes.js"></script>
     <link href="../portfolio/cover.css" rel="stylesheet" />
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow: inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
-      }
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
-      }
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
   </head>
+
   <body class="d-flex h-100 text-center text-bg-dark">
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path
-          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
-        ></path>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path
-          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
-        ></path>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path
-          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-        ></path>
-        <path
-          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
-        ></path>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path
-          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-        ></path>
-      </symbol>
-    </svg>
-    <div
-      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
-    >
-      <button
-        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-        id="bd-theme"
-        type="button"
-        aria-expanded="false"
-        data-bs-toggle="dropdown"
-        aria-label="Toggle theme (auto)"
-      >
-        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
-          <use href="#circle-half"></use>
-        </svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul
-        class="dropdown-menu dropdown-menu-end shadow"
-        aria-labelledby="bd-theme-text"
-      >
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="light"
-            aria-pressed="false"
-          >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
-              <use href="#sun-fill"></use>
-            </svg>
-            Light
-            <svg class="bi ms-auto d-none" aria-hidden="true">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="dark"
-            aria-pressed="false"
-          >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
-              <use href="#moon-stars-fill"></use>
-            </svg>
-            Dark
-            <svg class="bi ms-auto d-none" aria-hidden="true">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center active"
-            data-bs-theme-value="auto"
-            aria-pressed="true"
-          >
-            <svg class="bi me-2 opacity-50" aria-hidden="true">
-              <use href="#circle-half"></use>
-            </svg>
-            Auto
-            <svg class="bi ms-auto d-none" aria-hidden="true">
-              <use href="#check2"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
+    <!-- 아이콘 심볼 구역 생략 … -->
+
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
+      <!-- ───────── Header / Nav ───────── -->
+      <header class="mb-auto fixed-header">
         <div>
-          <h3 class="float-md-start mb-0">Cover</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a
-              class="nav-link fw-bold py-1 px-0 active"
-              aria-current="page"
-              href="#"
-              >Home</a
+          <h3 class="float-md-start mb-0">Portfolio</h3>
+
+          <nav
+            id="mainNav"
+            class="nav nav-masthead navbar navbar-dark justify-content-center float-md-end"
+          >
+            <a class="nav-link fw-bold py-1 px-0" href="#">Home</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#about">About Me</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#project">Project</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#contact">Contact</a>
+
+            <!-- 햄버거 -->
+            <button
+              class="navbar-toggler collapsed ms-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navExtra"
+              aria-label="Toggle navigation"
             >
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse" id="navExtra">
+              <ul class="navbar-nav ms-auto mt-2">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#project">Project</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </header>
-      <main class="px-3">
-        <h1>Cover your page.</h1>
-        <p class="lead">
-          Cover is a one-page template for building simple and beautiful home
-          pages. Download, edit the text, and add your own fullscreen background
-          photo to make it your own.
-        </p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white"
-            >Learn more</a
+      <!-- ───────── Home / Hero ───────── -->
+      <main class="px-3 page-section">
+        <!-- NEW class -->
+        <div class="w-100">
+          <h1>이상정의 포트폴리오입니다.</h1>
+          <p class="lead">방문해 주셔서 감사합니다.</p>
+          <a
+            class="btn btn-lg btn-light fw-bold border-white bg-white"
+            href="#about"
           >
-        </p>
+            자세히 알고싶나요?
+          </a>
+        </div>
       </main>
-      <footer class="mt-auto text-white-50">
+
+      <!-- ───────── About ───────── -->
+      <section id="about" class="container page-section">
+        <div class="text-start text-white">
+          <h2 class="display-6 fw-bold mb-4">About Me</h2>
+
+          <!-- list-unstyled → list-about 로 교체 -->
+          <ul class="list-about lead mb-0">
+            <li>부트캠프 새싹반 수강 중</li>
+            <li>아직 잘 모르겠지만 재미와 기대로 수강중</li>
+            <li>목표: AI를 활용한 1인 창업개발자로써의 전환</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Project ───────── -->
+      <section
+        id="project"
+        class="container page-section border-top border-secondary"
+      >
+        <!-- NEW class -->
+        <div class="w-100">
+          <h2 class="display-6 fw-bold mb-5 text-white">Project</h2>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card text-white h-100" style="background: #313538">
+                <div class="card-body">
+                  <h5 class="card-title">프로젝트 A</h5>
+                  <p class="card-text small">
+                    A는 언제나 편리합니다.<br />
+                    A 프로젝트는 여러분의 편의성을 위해 만들어졌습니다. 고객님이
+                    어떤 상황에서 질문을 하더라도 그에 맞는 답변과 함께 자동으로
+                    수정이 가능합니다.
+                  </p>
+                  <a href="#" class="stretched-link text-info">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card text-white h-100" style="background: #313538">
+                <div class="card-body">
+                  <h5 class="card-title">프로젝트 B</h5>
+                  <p class="card-text small">
+                    B는 언제나 빠릅니다.<br />
+                    B 프로젝트는 빠르게 변하는 현대시대에 정확히 대응합니다.
+                    아무리 복잡한 연산이어도 B프로젝트는 언제나 가장 빠른 결과를
+                    도출해냅니다.<br />(자사 프로그램 기준 테스트 완료)
+                  </p>
+                  <a href="#" class="stretched-link text-info">Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card text-white h-100" style="background: #313538">
+                <div class="card-body">
+                  <h5 class="card-title">프로젝트 C</h5>
+                  <p class="card-text small">
+                    C은 언제나 모르겠습니다.<br />
+                    빠르고 편하고 또 무엇이 매리트가 있을까요? 세개를 적어야
+                    하기 때문에 모른채로 두겠습니다.
+                  </p>
+                  <a href="#" class="stretched-link text-info">Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Contact ───────── -->
+      <section
+        id="contact"
+        class="container page-section border-top border-secondary"
+      >
+        <!-- NEW class -->
+        <div class="w-100">
+          <h2 class="display-6 fw-bold mb-4 text-white">Contact</h2>
+          <p class="text-white-50 mb-4">
+            궁금한 점이 있다면 메시지를 남겨 주세요.
+          </p>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <input class="form-control" placeholder="Your name" />
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="col-12">
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <div class="col-12 text-end">
+              <button type="submit" class="btn btn-primary btn-bd-primary">
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ───────── Footer ───────── -->
+      <footer class="mt-auto text-white-50 py-4 border-top border-secondary">
         <p>
           Cover template for
           <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>,
@@ -228,9 +186,7 @@
         </p>
       </footer>
     </div>
-    <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
-      class="astro-vvvwv3sm"
-    ></script>
+
+    <script src="../portfolio/assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
